@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - STACKLY Agriculture</title>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- DASHBOARD WRAPPER -->
+    <div class="dashboard-wrapper">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-brand">
+                    <i class="fa-solid fa-leaf"></i> STACKLY<span>Agri</span>
+                </a>
+                <button class="sidebar-toggle-inner" id="sidebar-toggle" title="Collapse Menu">
+                    <i class="fa-solid fa-angles-left"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-menu">
+                <span class="sidebar-menu-title">Main Menu</span>
+                <ul>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link active" onclick="alert('Viewing Overview');">
+                            <i class="fa-solid fa-border-all"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" onclick="alert('Viewing Farms list');">
+                            <i class="fa-solid fa-seedling"></i>
+                            <span>My Farms</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" onclick="alert('Viewing Crop Health telemetry');">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <span>Crop Health</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" onclick="alert('Viewing Orders/Logistics');">
+                            <i class="fa-solid fa-truck-moving"></i>
+                            <span>My Orders</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <span class="sidebar-menu-title" style="margin-top: 24px;">Support & Settings</span>
+                <ul>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" onclick="alert('Viewing Profile details');">
+                            <i class="fa-solid fa-user-gear"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" onclick="alert('Viewing Settings panel');">
+                            <i class="fa-solid fa-sliders"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item" style="margin-top: 30px;">
+                        <a class="sidebar-link logout-btn" id="logout-btn" style="color: #FF8A80;">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Sidebar User Profile info -->
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+                    </div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name" id="sidebar-user-name">User Account</div>
+                        <div class="sidebar-user-role" id="sidebar-user-role">Farmer</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT CONTAINER -->
+        <main class="main-content">
+            
+            <!-- HEADER -->
+            <header class="dashboard-header">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button class="sidebar-toggle-mobile" id="sidebar-toggle-mobile">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                    <h2 style="font-size: 1.3rem;">Farmer Portal</h2>
+                </div>
+
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass" style="color: var(--color-text-muted);"></i>
+                    <input type="text" placeholder="Search farm sensors, crops, logs...">
+                </div>
+
+                <div class="header-actions">
+                    <button class="action-icon-btn" onclick="alert('No new alerts.');" title="Notifications">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="btn-badge"></span>
+                    </button>
+                    <button class="action-icon-btn" onclick="alert('Loading Settings...');" title="Settings">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- CONTAINER BODY -->
+            <div class="dashboard-container">
+                
+                <!-- Welcome Block -->
+                <div class="welcome-banner">
+                    <h1 style="color: white;">Welcome back, <span id="user-welcome-name">Farmer</span>!</h1>
+                    <p>Your agricultural sensors are running online. Crop health indexes look strong today.</p>
+                </div>
+
+                <!-- Statistics Metrics Grid Cards -->
+                <div class="metrics-grid">
+                    
+                    <!-- Farms Count -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <h3>Total Farms</h3>
+                            <div class="metric-value">4</div>
+                            <span class="metric-change positive"><i class="fa-solid fa-arrow-up"></i> 1 New Field</span>
+                        </div>
+                        <div class="metric-icon-box green"><i class="fa-solid fa-map-location-dot"></i></div>
+                    </div>
+
+                    <!-- Active Crops -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <h3>Active Crops</h3>
+                            <div class="metric-value">12</div>
+                            <span class="metric-change positive"><i class="fa-solid fa-arrow-up"></i> Wheat / Maize</span>
+                        </div>
+                        <div class="metric-icon-box blue"><i class="fa-solid fa-seedling"></i></div>
+                    </div>
+
+                    <!-- Weather Info -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <h3>Local Weather</h3>
+                            <div class="metric-value">78&deg;F</div>
+                            <span class="metric-change positive" style="color: var(--color-text-muted);"><i class="fa-solid fa-cloud-sun"></i> Sunny, Sunny</span>
+                        </div>
+                        <div class="metric-icon-box orange"><i class="fa-solid fa-temperature-half"></i></div>
+                    </div>
+
+                    <!-- Spending / Orders -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <h3>Total Spending</h3>
+                            <div class="metric-value">$2,450</div>
+                            <span class="metric-change negative"><i class="fa-solid fa-arrow-up"></i> +8.2% monthly</span>
+                        </div>
+                        <div class="metric-icon-box purple"><i class="fa-solid fa-credit-card"></i></div>
+                    </div>
+
+                </div>
+
+                <!-- Graphs & Analytics Grid Rows -->
+                <div class="dash-row">
+                    
+                    <!-- Yield Performance Chart -->
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3 class="dash-card-title">Crop Performance yields (tons)</h3>
+                            <div class="dash-card-actions">
+                                <select class="dash-select">
+                                    <option>First Half 2026</option>
+                                    <option>Second Half 2026</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="cropPerformanceChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Crop Health Doughnut -->
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3 class="dash-card-title">Crop Health Index</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="cropHealthChart"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dash-row-equal">
+                    
+                    <!-- Farm Activity Bar Chart -->
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3 class="dash-card-title">Weekly Farm Activities (Hrs)</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="farmActivityChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Recent Actions Feed -->
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3 class="dash-card-title">Recent activities</h3>
+                        </div>
+                        <div class="activity-list">
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon success"><i class="fa-solid fa-droplet"></i></div>
+                                <div class="activity-detail">
+                                    <div class="activity-text"><strong>Smart Irrigation</strong> system activated in Sector B (Wheat).</div>
+                                    <div class="activity-time">12 mins ago</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon info"><i class="fa-solid fa-flask"></i></div>
+                                <div class="activity-detail">
+                                    <div class="activity-text"><strong>Precision Soil</strong> assay report completed for Sector D.</div>
+                                    <div class="activity-time">2 hours ago</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon warning"><i class="fa-solid fa-helicopter"></i></div>
+                                <div class="activity-detail">
+                                    <div class="activity-text"><strong>Drone telemetry sweep</strong> finished. Weed spreads detected in Sector A.</div>
+                                    <div class="activity-time">Yesterday</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Progress indicators list -->
+                <div class="dash-card" style="margin-top: 30px;">
+                    <div class="dash-card-header">
+                        <h3 class="dash-card-title">Seasonal Harvesting Progress</h3>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <!-- Wheat progress -->
+                        <div style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">
+                                <span>Wheat (Sector B)</span>
+                                <span>85% Completed</span>
+                            </div>
+                            <div style="background-color: var(--color-bg-light); height: 10px; border-radius: var(--radius-full); overflow: hidden;">
+                                <div style="background-color: var(--color-primary); width: 85%; height: 100%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Maize progress -->
+                        <div style="margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px;">
+                                <span>Maize (Sector A)</span>
+                                <span>45% Completed</span>
+                            </div>
+                            <div style="background-color: var(--color-bg-light); height: 10px; border-radius: var(--radius-full); overflow: hidden;">
+                                <div style="background-color: var(--color-earth-light); width: 45%; height: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/user-dashboard.js"></script>
+</body>
+</html>

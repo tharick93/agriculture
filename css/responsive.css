@@ -1,0 +1,333 @@
+/* ==========================================================================
+   STACKLY AGRICULTURE WEBSITE - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Large Monitors (Min 1400px) */
+@media (min-width: 1400px) {
+    :root {
+        --container-width: 1320px;
+    }
+}
+
+/* Laptops / Desktops (Max 1200px) */
+@media (max-width: 1200px) {
+    :root {
+        --container-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-image-container {
+        height: 480px;
+    }
+    
+    .timeline {
+        max-width: 90%;
+    }
+}
+
+/* Tablets (Max 992px) */
+@media (max-width: 992px) {
+    :root {
+        --container-width: 720px;
+    }
+    
+    .section {
+        padding: 80px 0;
+    }
+    
+    /* Layout Grids */
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Navbar & Hamburger */
+    .hamburger {
+        display: flex;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: var(--navbar-height);
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - var(--navbar-height));
+        background-color: var(--color-bg-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 50px 24px;
+        gap: 30px;
+        transition: var(--transition-smooth);
+        box-shadow: 0 15px 30px rgba(15, 56, 35, 0.1);
+        z-index: 999;
+        overflow-y: auto;
+    }
+    
+    .header.sticky .navbar {
+        top: 70px;
+        height: calc(100vh - 70px);
+    }
+    
+    .navbar.open {
+        left: 0;
+    }
+    
+    .nav-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+        border-top: 1px solid rgba(27, 94, 32, 0.1);
+        padding-top: 30px;
+    }
+    
+    .nav-actions a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .btn-nav-login {
+        padding: 14px;
+    }
+    
+    .btn-nav-signup {
+        padding: 14px;
+        display: block;
+    }
+    
+    /* Hero section */
+    .hero {
+        min-height: auto;
+        padding: 140px 0 80px 0;
+        text-align: center;
+    }
+    
+    .hero .container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-image-container {
+        height: 380px;
+    }
+    
+    /* Welcome / Image Stack */
+    .welcome-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .image-stack {
+        height: 380px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    /* Stats grid */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 40px;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    /* Timeline / journey */
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+        padding-left: 70px;
+    }
+    
+    .timeline-dot {
+        left: 20px !important;
+        right: auto !important;
+    }
+    
+    /* Contact grid */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Devices (Max 768px) */
+@media (max-width: 768px) {
+    :root {
+        --container-width: 540px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+    
+    .stats-bar {
+        padding: 40px 0;
+    }
+    
+    .stat-number {
+        font-size: 2.8rem;
+    }
+    
+    .cta-banner {
+        padding: 60px 24px;
+    }
+    
+    .cta-banner h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .footer-bottom-links {
+        justify-content: center;
+    }
+    
+    /* Form grids */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-container {
+        padding: 30px 24px;
+    }
+    
+    .auth-card {
+        padding: 30px 20px;
+    }
+    
+    .user-type-switch-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Small Mobile Devices (Max 480px) */
+@media (max-width: 480px) {
+    :root {
+        --container-width: 100%;
+    }
+    
+    body {
+        font-size: 15px;
+    }
+    
+    .hero-title {
+        font-size: 1.9rem;
+    }
+    
+    .hero-image-container {
+        height: 280px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 12px 24px;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .image-stack {
+        height: 280px;
+    }
+    
+    .testimonial-card {
+        padding: 40px 20px;
+    }
+    
+    .testimonial-quote {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra Small Mobile (Max 360px) */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.7rem;
+    }
+    
+    .header {
+        padding: 0 10px;
+    }
+}

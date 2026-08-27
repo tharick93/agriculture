@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - STACKLY Agriculture</title>
+    <meta name="description" content="Access your STACKLY agriculture analytics. Log in as a User, Farmer, or Administrator.">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i> STACKLY<span>Agri</span>
+            </a>
+            
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions" id="nav-auth-actions">
+                    <a href="signup.html" class="btn-nav-login">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary btn-nav-signup">Login</a>
+                </div>
+            </nav>
+
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- LOGIN CORE FORM WRAPPER -->
+    <div class="auth-page-wrapper">
+        <div class="auth-card reveal active">
+            
+            <div class="auth-header">
+                <a href="index.html" class="auth-logo">
+                    <i class="fa-solid fa-leaf"></i> STACKLY
+                </a>
+                <h2 class="auth-title">Welcome Back</h2>
+                <p class="auth-subtitle">Sign in to manage your farms</p>
+            </div>
+
+            <!-- Login Error Display -->
+            <div class="error-msg" id="login-error-alert" style="background-color: #FFEBEE; border-left: 4px solid #D32F2F; padding: 12px; margin-bottom: 20px; border-radius: var(--radius-sm); color: #C62828;"></div>
+
+            <!-- Pre-fill Credentials helper block -->
+         
+
+            <form id="login-form" novalidate>
+                
+                <!-- Login Option Selection: Login As USER or ADMIN -->
+                <div class="form-group">
+                    <label class="form-label">Login As</label>
+                    <div class="login-options-grid">
+                        <div class="user-type-option">
+                            <input type="radio" name="loginAs" id="login-user" value="user" checked>
+                            <label for="login-user" class="user-type-label">
+                                <i class="fa-solid fa-user"></i> USER / FARMER
+                            </label>
+                        </div>
+                        <div class="user-type-option">
+                            <input type="radio" name="loginAs" id="login-admin" value="admin">
+                            <label for="login-admin" class="user-type-label">
+                                <i class="fa-solid fa-user-shield"></i> ADMIN
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email field -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address / Username</label>
+                    <input type="email" id="email" class="form-control" placeholder="enter email" required>
+                </div>
+
+                <!-- Password field -->
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" class="form-control" placeholder="enter password" required>
+                        <button type="button" class="password-toggle-btn" tabindex="-1"><i class="fa-solid fa-eye"></i></button>
+                    </div>
+                </div>
+
+                <!-- Remember Me and Forgot Password links -->
+                <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-top: -10px;">
+                    <label class="form-checkbox">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember Me</span>
+                    </label>
+                    <a href="#" onclick="alert('Password reset link has been sent to your email.');" style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Forgot Password?</a>
+                </div>
+
+                <!-- Form Submit Button -->
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                    Sign In <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="signup.html">Register</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

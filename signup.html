@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account - STACKLY Agriculture</title>
+    <meta name="description" content="Create your STACKLY account to access farm management dashboards, soil telemetry sensors, and automated irrigation.">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR (STICKY AND LOGO) -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i> STACKLY<span>Agri</span>
+            </a>
+            
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions" id="nav-auth-actions">
+                    <a href="signup.html" class="btn-nav-login">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary btn-nav-signup">Login</a>
+                </div>
+            </nav>
+
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SIGN UP CORE FORM WRAPPER -->
+    <div class="auth-page-wrapper">
+        <div class="auth-card reveal active">
+            
+            <div class="auth-header">
+                <a href="index.html" class="auth-logo">
+                    <i class="fa-solid fa-leaf"></i> STACKLY
+                </a>
+                <h2 class="auth-title">Create Your Account</h2>
+                <p class="auth-subtitle">Join us to start managing your agricultural yields</p>
+            </div>
+
+            <!-- Registration Success Banner -->
+            <div class="success-banner" id="success-banner"></div>
+
+            <form id="signup-form" novalidate>
+                
+                <!-- Full Name Field -->
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input type="text" id="fullname" class="form-control" placeholder="Enter full name" required>
+                </div>
+
+                <!-- Email & Phone Grouped Row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+                    </div>
+                </div>
+
+                <!-- Password Fields Row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="password" class="form-control" placeholder="Min 6 characters" required>
+                            <button type="button" class="password-toggle-btn" tabindex="-1"><i class="fa-solid fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="confirmPassword" class="form-control" placeholder="Re-enter password" required>
+                            <button type="button" class="password-toggle-btn" tabindex="-1"><i class="fa-solid fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Field -->
+                <div class="form-group">
+                    <label for="location" class="form-label">Location (State/Region)</label>
+                    <input type="text" id="location" class="form-control" placeholder="e.g. California, USA" required>
+                </div>
+
+                <!-- User Type Selection (User / Farmer) -->
+                <div class="form-group">
+                    <label class="form-label">Register As</label>
+                    <div class="user-type-switch-wrapper">
+                        <div class="user-type-option">
+                            <input type="radio" name="userType" id="type-user" value="user" checked>
+                            <label for="type-user" class="user-type-label">
+                                <i class="fa-solid fa-user-gear"></i> Regular User
+                            </label>
+                        </div>
+                        <div class="user-type-option">
+                            <input type="radio" name="userType" id="type-farmer" value="farmer">
+                            <label for="type-farmer" class="user-type-label">
+                                <i class="fa-solid fa-seedling"></i> Farm Operator
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions checkbox -->
+                <div class="form-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
+                    </label>
+                </div>
+
+                <!-- Form Submit Button -->
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                    Create Account <i class="fa-solid fa-user-plus"></i>
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                Already have an account? <a href="login.html">Sign In</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

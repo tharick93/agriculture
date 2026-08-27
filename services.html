@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - STACKLY Agriculture Solutions</title>
+    <meta name="description" content="Explore STACKLY's 12 core agriculture services including crop management, soil assays, weather alerts, and smart watering systems.">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- 1. NAVBAR -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i> STACKLY<span>Agri</span>
+            </a>
+            
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions" id="nav-auth-actions">
+                    <a href="signup.html" class="btn-nav-login">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary btn-nav-signup">Login</a>
+                </div>
+            </nav>
+
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. SERVICES HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Agriculture Services</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Services</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE CARDS GRID SECTION (CONTAINING THE 11 CORE INDIVIDUAL SERVICE DETAILS AS SECTIONS AND CARDS) -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Deliver</span>
+                <h2 class="section-title">11 Precision Agriculture Workflows</h2>
+                <p class="section-desc">We offer state-of-the-art tools and resources to maximize harvest quality and ensure resource safety.</p>
+            </div>
+            
+            <div class="grid-3">
+
+                <!-- 3. Agriculture Consulting -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=600&q=80" alt="Consulting in field">
+                        <span class="service-card-badge">Certified</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3>Agronomy Consulting</h3>
+                        <p>Receive structured, data-driven farming schedules and crop recommendations from certified agronomy specialists.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Crop Management -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80" alt="Crop management sowing seed">
+                        <span class="service-card-badge">Essential</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                        <h3>Crop Management</h3>
+                        <p>Track seeding cycles, target growth metrics, harvest yields, and storage ventilation parameters in one location.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Soil Analysis -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="assets/agri6.jpeg" alt="Soil analysis testing">
+                        <span class="service-card-badge">Popular</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-flask"></i></div>
+                        <h3>Soil Analysis Assays</h3>
+                        <p>Laboratory mapping of chemical elements, nitrogen counts, moisture retaining rates, and soil organic indexes.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Smart Irrigation -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="assets/agri5.jpeg" alt="Irrigation sprinkler">
+                        <span class="service-card-badge">Eco Friendly</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-droplet"></i></div>
+                        <h3>Smart Irrigation</h3>
+                        <p>Integrate IoT valves to trigger watering cycles based on live climate predictions and moisture sensors.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Pest Management -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=600&q=80" alt="Farmer examining leaf">
+                        <span class="service-card-badge">Critical</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-bug-slash"></i></div>
+                        <h3>Pest Management</h3>
+                        <p>AI diagnosis tools that identify crop pests through photos and suggest organic, targeted removal methods.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Crop Monitoring -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80" alt="Drone telemetry fields">
+                        <span class="service-card-badge">Automated</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-helicopter"></i></div>
+                        <h3>Drone Crop Monitoring</h3>
+                        <p>Continuous multispectral satellite tracking and drone sweeps detailing leaf indices and weeds spread.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Farm Management -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=600&q=80" alt="Tractor driving field">
+                        <span class="service-card-badge">Management</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-list-check"></i></div>
+                        <h3>Farm Management</h3>
+                        <p>Manage machinery maintenance logs, seed inventories, worker schedules, and budget metrics in our dashboard.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Weather Monitoring -->
+              
+                <!-- 11. Farmer Training -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=600&q=80" alt="Farmer teaching training">
+                        <span class="service-card-badge">Education</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Farmer Training Programs</h3>
+                        <p>On-site seminars and digital guides teaching soil restoration techniques and smart system management.</p>
+                    </div>
+                </div>
+
+                <!-- 12. Agricultural Technology -->
+               
+
+                <!-- 13. Supply Chain Support -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Supply chain storage boxes">
+                        <span class="service-card-badge">Logistics</span>
+                    </div>
+                    <div class="service-card-content">
+                        <div class="service-card-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                        <h3>Supply Chain Logistics</h3>
+                        <p>Connect with transport channels and cold-storage options to distribute your crops safely and reduce wastage.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. SERVICE STATISTICS SECTION -->
+    <section class="section section-dark reveal">
+        <div class="container text-center">
+            <span class="section-tag">Impact Metrics</span>
+            <h2 class="section-title">Proven Operational Benefits</h2>
+            <p class="section-desc" style="max-width: 600px; margin: 0 auto 50px auto; color: #B4C6BE;">STACKLY services help agricultural businesses reduce overall spending while increasing crop yields.</p>
+            
+            <div class="grid-3" style="margin-top: 30px;">
+                <div style="background-color: var(--color-bg-dark-card); padding: 40px 24px; border-radius: var(--radius-sm);">
+                    <h3 style="color: var(--color-accent); font-size: 2.8rem; margin-bottom: 10px;">-30%</h3>
+                    <p style="color: white; font-weight: 700; margin-bottom: 8px;">Water Costs Saved</p>
+                    <p style="color: #B4C6BE; font-size: 0.9rem;">Achieved through live weather-responsive watering cycles and moisture monitoring.</p>
+                </div>
+                <div style="background-color: var(--color-bg-dark-card); padding: 40px 24px; border-radius: var(--radius-sm);">
+                    <h3 style="color: var(--color-accent); font-size: 2.8rem; margin-bottom: 10px;">+22%</h3>
+                    <p style="color: white; font-weight: 700; margin-bottom: 8px;">Average Harvest Yields</p>
+                    <p style="color: #B4C6BE; font-size: 0.9rem;">Enabled by soil mapping advice, targeted fertilization, and crop monitoring sweeps.</p>
+                </div>
+                <div style="background-color: var(--color-bg-dark-card); padding: 40px 24px; border-radius: var(--radius-sm);">
+                    <h3 style="color: var(--color-accent); font-size: 2.8rem; margin-bottom: 10px;">-25%</h3>
+                    <p style="color: white; font-weight: 700; margin-bottom: 8px;">Fertilizer Waste Reduced</p>
+                    <p style="color: #B4C6BE; font-size: 0.9rem;">Delivered by spot diagnostics that apply nutrients only to specific field zones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. WHY CHOOSE OUR SERVICES SECTION -->
+    <section class="section reveal">
+        <div class="container grid-2">
+            <div>
+                <span class="section-tag">Quality Standards</span>
+                <h2 class="section-title">Agritech Services Built for Reliability</h2>
+                <p class="section-desc" style="margin-bottom: 24px;">Our tools are engineered to handle harsh field environments. From waterproof sensor housings to encrypted wireless networks, we design systems that farmers can count on in any weather.</p>
+                <div class="why-choose-list">
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="why-choose-text">
+                            <h4>Real-Time Sensor Telemetry</h4>
+                            <p>Live soil moisture, wind speed, and air temperature readings, updated every 15 minutes.</p>
+                        </div>
+                    </div>
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="why-choose-text">
+                            <h4>Tailored Setup & Onboarding</h4>
+                            <p>Our technical team helps you map your fields, install hardware, and configure alerts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md);">
+                <img src="assets/agri 1.jpeg" alt="Lush green lettuce farm field close up view">
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. CALL TO ACTION SECTION -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Ready to Optimize Your Agricultural Output?</h2>
+                <p>Register as a farmer to monitor soil metrics, configure automated watering, and track crop health indicators.</p>
+                <div class="btn-group">
+                    <a href="signup.html" class="btn btn-accent">Create Free Account <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="login.html" class="btn btn-outline-white">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-widget footer-about">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-leaf"></i> STACKLY<span>Agri</span>
+                </a>
+                <p>STACKLY leading-edge technology enables precision agriculture, sustainable field planning, and automated resource monitoring to guarantee global food safety.</p>
+                <div class="social-links">
+                    <a href="404.html" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="404.html" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404.html" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <h3>Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html"><i class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-circle-chevron-right"></i> About Us</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-circle-chevron-right"></i> Contact Page</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h3>Core Services</h3>
+                <ul class="footer-links-list">
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Soil Analysis</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Smart Irrigation</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Crop Monitoring</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Farm Consulting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h3>Newsletter</h3>
+                <p style="color: #B4C6BE; font-size: 0.9rem; margin-bottom: 20px;">Subscribe to receive weekly crop tips and agritech alerts.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                    <input type="email" placeholder="Your Email" class="newsletter-input" required>
+                    <button type="submit" class="btn btn-primary newsletter-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 STACKLY Agriculture. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="404.html">Privacy Policy</a>
+                <a href="404.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

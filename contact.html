@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - STACKLY Agriculture Solutions</title>
+    <meta name="description" content="Reach out to STACKLY Agri. Contact us via phone, email, or visit our office. Read our FAQ for quick troubleshooting answers.">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- 1. NAVBAR -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i> STACKLY<span>Agri</span>
+            </a>
+            
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <div class="nav-actions" id="nav-auth-actions">
+                    <a href="signup.html" class="btn-nav-login">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary btn-nav-signup">Login</a>
+                </div>
+            </nav>
+
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. CONTACT HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact STACKLY Agriculture</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Contact Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CONTACT INTRODUCTION -->
+    <section class="section reveal">
+        <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
+            <span class="section-tag">Get in Touch</span>
+            <h2 class="section-title">We are Here to Support Your Farming Operations</h2>
+            <p class="section-desc">Have questions about our soil analysis, smart watering systems, or user dashboards? Our technical support teams and agronomy consultants are ready to assist you. Send us a message or visit one of our offices.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT CORE DETAILS (SECTIONS 4, 5, 6, 7 & FORM 8) -->
+    <section class="section section-dark reveal" style="padding-top: 80px;">
+        <div class="container contact-grid">
+            
+            <!-- Side Card with Info Blocks -->
+            <div class="contact-info-card">
+                <h3>Contact Information</h3>
+                <p style="color: #B4C6BE; font-size: 0.95rem; margin-bottom: 30px;">Reach out directly via our specialized channels:</p>
+                
+                <div class="contact-details-list">
+                    
+                    <!-- 4. Phone Information -->
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-detail-text">
+                            <h4>Phone Support</h4>
+                            <p>Toll Free: +1 (800) 555-0190</p>
+                            <p>Global Office: +1 (415) 555-0125</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Email Information -->
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-detail-text">
+                            <h4>Email Enquiries</h4>
+                            <p>Support: support@stackly.com</p>
+                            <p>Sales: sales@stackly.com</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Office Information -->
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-detail-text">
+                            <h4>Headquarters</h4>
+                            <p>100 Pine Street, Suite 2400</p>
+                            <p>San Francisco, CA 94111, USA</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. Business Hours -->
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="contact-detail-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 2:00 PM (PST)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 8. Contact Form Container -->
+            <div class="form-container" style="color: var(--color-text-dark);">
+                <div class="success-banner"></div>
+                <h3 class="form-title">Send a Message</h3>
+                <p class="form-subtitle">Fill in the fields below and an agronomy agent will reply within 24 hours.</p>
+                
+                <form id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="How can we help?" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message Content</label>
+                        <textarea id="message" rows="5" class="form-control" placeholder="Write your comments here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 9. MAP SECTION -->
+    <section class="section reveal" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Location</span>
+                <h2 class="section-title">Visit Our Technical Center</h2>
+                <p class="section-desc">Located in the heart of San Francisco's engineering district.</p>
+            </div>
+            <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); height: 400px; width: 100%;">
+                <iframe 
+                    src="https://www.google.com/maps?q=100+Pine+Street,+San+Francisco,+CA+94111&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ ACCORDION SECTION -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Questions & Answers</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-desc">Quickly find answers to common queries regarding Stackly systems.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>How do the soil moisture sensors report data?</h3>
+                        <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>Our field telemetry units connect to a local LoRa gateway node installed on your farm. The gateway transmits readings to Stackly databases using cellular links, updating your dashboard metrics every 15 minutes.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Do I need an active internet connection to run the auto irrigation valve?</h3>
+                        <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>No. While the valves sync settings from the cloud when connected, they contain internal microcontrollers that execute pre-programmed scheduling rules locally even if connection is temporarily lost.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Can I add multiple user accounts for my farm workers?</h3>
+                        <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>Yes. Registered Farm operators can configure access permissions for crew members, allowing workers to update task lists and read weather metrics without accessing budget details.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Is there an onboarding fee for soil mapping set ups?</h3>
+                        <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-content">
+                        <p>Standard registration includes basic set up checklists. Large scale field mappings involving drone flyovers feature custom quotes based on monitored acreage sizes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CALL TO ACTION (CTA) SECTION -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Want to Request a Live Farm Demo?</h2>
+                <p>Register an account to explore soil telemetry graphs, weather charts, and sensor simulators.</p>
+                <div class="btn-group">
+                    <a href="signup.html" class="btn btn-accent">Register Now <i class="fa-solid fa-user-plus"></i></a>
+                    <a href="login.html" class="btn btn-outline-white">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-widget footer-about">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-leaf"></i> STACKLY<span>Agri</span>
+                </a>
+                <p>STACKLY leading-edge technology enables precision agriculture, sustainable field planning, and automated resource monitoring to guarantee global food safety.</p>
+                <div class="social-links">
+                    <a href="404.html" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404.html" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="404.html" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404.html" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <h3>Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html"><i class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-circle-chevron-right"></i> About Us</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-circle-chevron-right"></i> Contact Page</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h3>Core Services</h3>
+                <ul class="footer-links-list">
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Soil Analysis</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Smart Irrigation</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Crop Monitoring</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-circle-chevron-right"></i> Farm Consulting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h3>Newsletter</h3>
+                <p style="color: #B4C6BE; font-size: 0.9rem; margin-bottom: 20px;">Subscribe to receive weekly crop tips and agritech alerts.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                    <input type="email" placeholder="Your Email" class="newsletter-input" required>
+                    <button type="submit" class="btn btn-primary newsletter-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 STACKLY Agriculture. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="404.html">Privacy Policy</a>
+                <a href="404.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
