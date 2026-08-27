@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Agriculture</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f4f8f2;
+            color: #23452a;
+            overflow: hidden;
+        }
+
+        .error-container {
+            width: 90%;
+            max-width: 650px;
+            text-align: center;
+            padding: 50px 30px;
+        }
+
+        .icon {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        .error-code {
+            font-size: clamp(90px, 18vw, 170px);
+            font-weight: 800;
+            line-height: 1;
+            color: #3d7a45;
+            letter-spacing: 5px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 20px 0 12px;
+            color: #244c2b;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #667568;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .home-btn {
+            background: #3d7a45;
+            color: white;
+        }
+
+        .home-btn:hover {
+            background: #2e6036;
+            transform: translateY(-2px);
+        }
+
+        .back-btn {
+            background: white;
+            color: #3d7a45;
+            border: 1px solid #3d7a45;
+        }
+
+        .back-btn:hover {
+            background: #3d7a45;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .leaf {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.15;
+        }
+
+        .leaf-one {
+            top: 15%;
+            left: 10%;
+            transform: rotate(-25deg);
+        }
+
+        .leaf-two {
+            bottom: 15%;
+            right: 10%;
+            transform: rotate(30deg);
+        }
+
+        .leaf-three {
+            top: 25%;
+            right: 15%;
+            transform: rotate(45deg);
+        }
+
+        .leaf-four {
+            bottom: 20%;
+            left: 15%;
+            transform: rotate(-40deg);
+        }
+
+        @media (max-width: 600px) {
+            .error-container {
+                padding: 30px 20px;
+            }
+
+            .error-code {
+                font-size: 110px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Decorative Agriculture Icons -->
+    <div class="leaf leaf-one">🌿</div>
+    <div class="leaf leaf-two">🌱</div>
+    <div class="leaf leaf-three">🍃</div>
+    <div class="leaf leaf-four">🌾</div>
+
+    <div class="error-container">
+
+        <div class="icon">🌱</div>
+
+        <div class="error-code">404</div>
+
+        <h1>Page Not Found</h1>
+
+        <p>
+            Sorry, the page you are looking for could not be found.
+            It may have been moved, deleted, or the URL may be incorrect.
+        </p>
+
+        <div class="buttons">
+
+            <!-- Change index.html if your home page has another filename -->
+            <a href="index.html" class="btn home-btn">
+                🏠 Go to Home
+            </a>
+
+            <!-- Go back to previous page -->
+            <button onclick="goBack()" class="btn back-btn">
+                ← Go Back
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+        function goBack() {
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
+```
